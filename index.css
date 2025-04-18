@@ -1,32 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+}
 :root{
-    --bgcolor : #2d2d2d;
-    --textcolor : #ffffff;
-    --textsec : #666;
-    --pmcolor : #fd4;
+    --primary-color:linear-gradient(135deg,#1a1a2e,#16213e);
+    --secondary-color:#e6e6e6;
+}
+body{
+    background: var(--primary-color);
+    color:var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    line-height:1.6;
 }
 
-body{
-     font-family: "Roboto", sans-serif;
-     background-color: var(--textsec);
-     color: var(--textcolor);
-}
-h1{
-    color: var(--pmcolor);
-}
 header{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    animation: fadeIn 0.8s ease-out;
 }
-.select{
-    padding-top: 4.25vw;
-    padding-right: 2vw;
+
+h1{
+    font-size: 2.2rem;
+    background: linear-gradient(90deg,#00dbde,#fc00ff);
+    background-clip: text;
+    color: transparent;
+    align-items: center;
+    gap: 0.8rem;
 }
-#mode{
-    background-color: #2d2d2d00;
-    border: none;
-    color: black;
-}
+
