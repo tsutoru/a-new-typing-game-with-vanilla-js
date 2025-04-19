@@ -3,32 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck
-    +w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1
-    ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./index.css">
-    <title>typing test</title>
+    <title>Typing Test Pro</title> 
 </head>
 
 <body>
+    <div class="info-bar">
+        <div id="sentence"> 
+            Tip: Appuyez sur ESC pour réinitialiser ° Tapez le plus vite possible ° 3 niveaux de difficulté disponibles
+        </div>
+    </div>
+
     <header>
-        <h1><i class="fa-solid fa-laptop-code"></i>Speed typing test</h1>
+        <h1><i class="fa-solid fa-laptop-code"></i> Typing Test <span class="version">PRO</span></h1> <!--Deuxième changement-->
         <div class="select">
             <select id="mode">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
+                <option value="easy">Facile</option> 
+                <option value="medium">Moyen </option>
+                <option value="hard">Difficile </option>
             </select>
         </div>
     </header>
 
     <main>
+        <div class="intro">
+            <h2>Bienvenue sur Typing Test pro.Testez votre rapidité sur votre clavier</h2>
+        </div>
+        <div class="word-counter">
+            <i class="fa-solid fa-keyboard"></i>
+            <span id="word-count">0</span> mots tapés
+        </div>
+
         <p id="word-display"></p>
-        <input type="text" id="input-field" id="world-play" autofocus>
-        <p id="results">Results : </p>
+        
+        <div class="input-container">
+            <input type="text" id="input-field" autofocus placeholder="Commencez à taper ici...">
+            <div class="focus-border"></div>
+        </div>
+
+        <div class="results-container">
+            <p id="results">
+                <i class="fa-solid fa-chart-line"></i> 
+                <span class="results-text">Results : </span>
+                <span class="wpm-value">0</span> MPM  
+                <span class="accuracy-value">100%</span> Précision
+            </p>
+        </div>
+
+        <div class="action-buttons">
+            <button class="button" id="restart-btn">
+                <i class="fa-solid fa-rotate-right"></i> Recommencer
+            </button>
+            <button class="button" id="share-btn">
+                <i class="fa-solid fa-share-nodes"></i> Partager
+            </button>
+        </div>
     </main>
-    
+
+    <div class="other">
+        <p>Made with <i class="fa-solid fa-heart"></i> by You | 
+           <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> | 
+           <a href="#"><i class="fa-solid fa-ranking-star"></i> Classement</a>
+        </p>
+    </div>
 
     <script src="script.js"></script>
 </body>
