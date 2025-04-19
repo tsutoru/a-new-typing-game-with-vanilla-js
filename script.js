@@ -20,7 +20,7 @@ const wordCountDisplay = document.getElementById("word-count");
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
     medium: ["keyboard", "monitor", "printer", "charger", "battery"],
-    hard: ["synchronize", "complicated", "development", "extravagant", "misconception"]
+    hard: ["synchronize", "complicated", "development", "extravagant", "misconception","cyclopentanoperhydrophénanthrène"]
 };
 
 // Generate a random word from the selected mode
@@ -46,7 +46,7 @@ const startTest = (wordCount = 30) => {
     wordsToType.forEach((word, index) => {
         const span = document.createElement("span");
         span.textContent = word + " ";
-        if (index === 0) span.style.color = "#fc00ff"; // Highlight first word
+        if (index === 0) span.style.color = " #ffa600"; // Highlight first word
         wordDisplay.appendChild(span);
     });
 
@@ -98,7 +98,7 @@ const checkInput = () => {
     updateResults();
 };
 
-// Move to the next word on spacebar press
+// Move to the next word and update stats only on spacebar press 
 const updateWord = (event) => {
     if (event.key === " ") {
         const currentWord = wordsToType[currentWordIndex];
@@ -122,12 +122,12 @@ const highlightNextWord = () => {
 
     if (currentWordIndex < wordElements.length) {
         if (currentWordIndex > 0) {
-            wordElements[currentWordIndex - 1].style.color = "#e6e6e6";
+            wordElements[currentWordIndex - 1].style.color = "  #00de3f";
         }
-        wordElements[currentWordIndex].style.color = "#fc00ff";
+        wordElements[currentWordIndex].style.color = " #ffa600";
     } else {
         // Test completed
-        wordElements[currentWordIndex - 1].style.color = "#e6e6e6";
+        wordElements[currentWordIndex - 1].style.color = " #00de3f";
     }
 };
 
@@ -145,6 +145,7 @@ inputField.addEventListener("keydown", (event) => {
 
 modeSelect.addEventListener("change", () => startTest());
 document.getElementById("restart-btn").addEventListener("click", () => startTest());
+
 
 // Start the test
 startTest();

@@ -1,76 +1,76 @@
-<!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typing Zen</title>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./image/2554267-removebg-preview.png">
+    <title>Typing Test Pro</title> 
 </head>
+
 <body>
-  <div class="notif"> 
-    <a href=""><i class="fa-solid fa-ranking-star"></i> Classement</a>
-    <a href=""><i class="fa-solid fa-gear"></i>Paramètres</a>
-    <a href=""><i class="fa-brands fa-github"></i>Github</a>
-  </div>
+    <div class="info-bar">
+        <div id="sentence"> 
+            Testez votre vitesse de frappe sur le clavier avec 3 niveau de difficulter
+        </div>
+    </div>
+<!--pour le petit plaisir de faire un titre cool by tsiafoy -->
+    <header>
+        <h1><i class="fa-solid fa-laptop-code"></i> Typing speed Test <span class="version">Demo</span></h1> 
+        
+        <div class="select">
+            <select id="mode">
+                <option value="easy">debutant</option> 
+                <option value="medium">experimenter</option>
+                <option value="hard">hacker</option>
+            </select>
+        </div>
+    </header>
 
-  <header>
-    <i class="fa-solid fa-keyboard"></i><h1>Typing Speed Test </h1>
-  </header>
+    <main>
+        <div class="intro">
+            <h2>Tester votre rapiditer a taper sur un clavier</h2>
+        </div>
+        <div class="word-counter">
+            <i class="fa-solid fa-keyboard"></i>
+            <span id="word-count">0</span> mots completer
+        </div>
 
-  <div class="intro">
-    <h2>Testez vos compétences dans la dactylographie</h2>
-    <p id="selection">Sélectionnez les parametres</p>
-  </div>
+        <p id="word-display"></p>
+        
+        <div class="input-container">
+            <input type="text" id="input-field" autofocus placeholder="Commencez à taper ici...">
+            <div class="focus-border"></div>
+        </div>
 
-  <div class="options">
-    <select id="mode">
-      <option value="easy">Facile</option>
-      <option value="medium">Moyen</option>
-      <option value="hard">Difficile</option>
-    </select>
-    
-    <select id="languages">
-      <option value="French">Français</option>
-      <option value="English">Anglais</option>
-      <option value="Spanish">Espagnol</option>
-      <option value="Deutsh">Allemand</option>
-    </select>
-  </div>
+        <div class="results-container">
+            <p id="results">
+                <i class="fa-solid fa-chart-line"></i> 
+                <span class="results-text">Results : </span>
+                <span class="wpm-value">0</span> MPM  
+                <span class="accuracy-value">100%</span> Précision
+            </p>
+        </div>
 
-  <main>
-    <div class="word-counter">
-      <span id="word-count">0</span> mots
+        <div class="action-buttons">
+            <button class="button" id="restart-btn">
+                <i class="fa-solid fa-rotate-right"></i> refaire
+            </button>
+            <button class="button" id="share-btn">
+                <i class="fa-solid fa-share-nodes"></i> partager
+            </button>
+        </div>
+    </main>
+
+    <div class="other">
+        <p>Made with <i class="fa-solid fa-heart"></i> by the developper (tsiafoy) | 
+           <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> | 
+           <a href="#"><i class="fa-solid fa-ranking-star"></i> Classement</a>
+        </p>
     </div>
 
-    <p id="word-display"></p>
-    
-    <div class="input-container">
-      <input type="text" id="input-field"  placeholder="Commencez à taper...">
-    </div>
-
-    <div class="results">
-      <div class="results-element">
-        <div class="result-value wpm-value">0</div>
-        <div class="result-label">MPM</div>
-      </div>
-      <div class="result-element">
-        <div class="result-value accuracy-value">100%</div>
-        <div class="result-label">Précision</div>
-      </div>
-    </div>
-
-    <div class="button">
-      <button class="button-element" id="restart-btn">
-        <i class="fa-solid fa-rotate-right"></i> Recommencer
-      </button>
-      <button class="button-element" id="share-btn">
-        <i class="fa-solid fa-share-nodes"></i> Partager
-      </button>
-    </div>
-  </main>
-
-  <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

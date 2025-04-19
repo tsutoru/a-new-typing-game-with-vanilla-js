@@ -1,6 +1,6 @@
 {
   "name": "typing-website-template",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "A barebones typing website for you to complete. ",
   "main": "index.html",
   "scripts": {
@@ -11,6 +11,6 @@
     "game",
     "speedtyping"
   ],
-  "author": "HEI Madagascar : Toky & Fiantso",
+  "author": "HEI Madagascar : Toky & Fiantso & tsiafoy & harena", 
   "license": "ISC"
 }

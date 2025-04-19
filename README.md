@@ -10,3 +10,9 @@ Since this is an HTML project, you can use your favorite CSS framework of choice
 - Added bonus if you know how to use Git well.
 
 And most important of all, have fun 🔥
+
+
+
+it's not a final design but it's just a demo of our game so 
+if it's a good site maybe we can try to develop this entierely so have a nice day 
+STD24093 and STD24105 the binome of harena and tsiafoy
